@@ -1,0 +1,397 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Start CSS */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #ffddd2;
+  scroll-behavior: smooth;
+}
+
+.navBar {
+  display: flex;
+  flex-flow: row;
+  font-size: 2.2em;
+  font-weight: 100;
+  text-decoration: none;
+  color: white;
+  gap: 0.8em;
+  padding: 0.4em 0.4em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navBar > a:hover {
+  color: #f3939f;
+}
+
+.navBar > * {
+  text-decoration: none;
+}
+
+.navBar > a {
+  color: #e01e37;
+  transition: color 0.5s;
+}
+
+.navBar > ul {
+  display: flex;
+  flex-flow: row;
+  gap: 0.8em;
+  justify-content: baseline;
+}
+
+.navBar li {
+  cursor: pointer;
+  transition: color 0.8s;
+}
+
+.navBar ul li:hover {
+  color: #e01e37;
+}
+
+img {
+  max-width: 50%;
+}
+
+.first-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7em;
+}
+
+.frontHeadings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  font-size: 5rem;
+  flex-shrink: 1;
+  color: white;
+  font-weight: lighter;
+  line-height: 1.3em;
+}
+
+.frontHeadings span {
+  color: red;
+}
+
+.second-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7em;
+}
+
+.secondSection__nested-flex {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.sectionContent h2 {
+  font-size: 3em;
+  color: firebrick;
+}
+
+.sectionContent img {
+  flex-basis: 10.5rem;
+}
+
+.third-section {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7em;
+}
+
+.thirdSection__nested-flex {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.fourth-section {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fourthSection__nested-flex {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.sectionContent p {
+  text-align: center;
+  font-size: 1.5em;
+  flex-grow: 1;
+  padding: 0 7em;
+  line-height: 3rem;
+  color: #f498b8;
+}
+
+@media screen and (max-width: 1700px) {
+  .frontHeadings {
+    font-size: 4rem;
+  }
+
+  .sectionContent h2 {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .frontHeadings {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .first-section {
+    flex-direction: column;
+  }
+
+  .second-section {
+    flex-direction: row;
+  }
+
+  .third-section {
+    flex-direction: row;
+  }
+
+  .fourth-section {
+    flex-direction: row;
+  }
+
+  .sectionContent h2 {
+    font-size: 2em;
+    padding-bottom: 1em;
+  }
+
+  .sectionContent img {
+    display: none;
+  }
+
+  .sectionContent p {
+    text-align: center;
+    font-size: 1.2em;
+    flex-grow: 1;
+    padding: 0 3em;
+    line-height: 2em;
+  }
+
+  img {
+    min-width: 50%;
+  }
+
+  .frontPicture {
+    max-width: 100%;
+  }
+
+  .frontHeadings {
+    display: none;
+  }
+}
+
+/* Prelom */
+
+@media screen and (max-width: 768px) {
+  .navBar {
+    background: pink;
+    opacity: 75%;
+  }
+
+  .navBar a:hover {
+    color: rgb(248, 0, 0);
+  }
+
+  .navBar li:hover {
+    color: rgb(248, 0, 0);
+  }
+
+  .first-section {
+    flex-direction: column;
+    margin-bottom: 6em;
+  }
+
+  .second-section {
+    flex-direction: column;
+    margin-bottom: 6em;
+  }
+
+  .sectionContent p {
+    padding-bottom: 3em;
+  }
+
+  .third-section {
+    flex-direction: column;
+    margin-bottom: 6em;
+  }
+
+  .fourth-section {
+    flex-direction: column;
+  }
+
+  img {
+    min-width: 100%;
+  }
+
+  .milk-pic {
+    order: 2;
+  }
+
+  .sprinkles-pic {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 472px) {
+  .navBar {
+    font-size: 1.6em;
+    background: pink;
+    opacity: 70%;
+    justify-content: space-evenly;
+  }
+}
